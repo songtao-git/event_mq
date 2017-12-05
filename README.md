@@ -1,0 +1,1 @@
+Event Queue。使用rabbitmq实现进程间通信
