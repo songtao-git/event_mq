@@ -40,10 +40,10 @@ async def publish_async(event, mq_server='default'):
 
 
 def publish(event, mq_server='default'):
-    future = gen.convert_yielded(publish_async(event, mq_server))
-    while not future.done():
-        time.sleep(0.01)
-    return future.result()
+    server = registry.get_mq_server(mq_server)
+    if not server:
+        raise Exception('cannot find named "{0}" mq_server'.format(mq_server))
+    registry.io_loop().spawn_callback(server.publish_async, event.event_name, _dumps(event))
 
 
 def subscribe(event_name, subscriber, mq_server='default'):
