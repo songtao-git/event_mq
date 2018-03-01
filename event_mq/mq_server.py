@@ -47,6 +47,7 @@ class Consumer:
             def handle_ack(future):
                 if future.exception():
                     channel.basic_nack(deliver.delivery_tag)
+                    LOGGER.error('handle(%s) message error: %s', self._handler, traceback.format_exc())
                 else:
                     channel.basic_ack(deliver.delivery_tag)
 

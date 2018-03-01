@@ -3,7 +3,7 @@ from distutils.core import setup
 
 setup(
     name='event-mq',
-    version='0.3',
+    version='0.4',
     packages=['event_mq'],
     description='A Event Queue for communication between progress.',
     url='https://github.com/songtao-git/event_mq',
