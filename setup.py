@@ -16,3 +16,5 @@ setup(
         'tornado==4.5.2',
     ],
 )
+
+# python3 setup.py sdist upload
