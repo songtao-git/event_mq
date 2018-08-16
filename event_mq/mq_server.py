@@ -105,7 +105,7 @@ class MqServer:
 
     async def __perform_connection_open(self):
         channel = await _get_channel(self._connection)
-        await gen.Task(channel.exchange_declare, exchange=self._exchange, durable=True)
+        await gen.Task(channel.exchange_declare, exchange=self._exchange, exchange_type='topic',  durable=True)
         for consumer in list(self._consumers):
             consumer.start(self._connection)
         channel.close()
