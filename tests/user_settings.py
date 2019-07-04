@@ -3,7 +3,7 @@
 SETTINGS = {
     'MQ_SERVERS': {
         'default': {
-            'url': 'amqp://test:123456@rabbitmq.dev.klicen.com:5672/zeus',
+            'url': 'amqp://rabbitmq-host/virtual-host',
             'exchange': 'zeus',
             'reconnect_delay': 5.0
         }
