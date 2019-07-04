@@ -3,8 +3,8 @@
 SETTINGS = {
     'MQ_SERVERS': {
         'default': {
-            'url': 'amqp://rabbitmq-host/virtual-host',
-            'exchange': 'zeus',
+            'url': 'amqp://rabbitmq-host:port/virtual-host',
+            'exchange': 'exchange-name',
             'reconnect_delay': 5.0
         }
     },
