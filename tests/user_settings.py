@@ -3,8 +3,8 @@
 SETTINGS = {
     'MQ_SERVERS': {
         'default': {
-            'url': 'amqp://rabbitmq-host:port/virtual-host',
-            'exchange': 'exchange-name',
+            'url': 'amqp://guest:guest@127.0.0.1:5672/test',
+            'exchange': 'test',
             'reconnect_delay': 5.0
         }
     },
