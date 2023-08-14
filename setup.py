@@ -13,7 +13,7 @@ setup(
     keywords=['Event', 'progress communication'],
     install_requires=[
         'pika==0.11.0',
-        'tornado==4.5.2',
+        'tornado==6.3.3',
     ],
 )
 
